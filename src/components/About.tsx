@@ -4,13 +4,12 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
-            <div className="rounded-2xl shadow-2xl bg-gradient-to-br from-brand-700 to-brand-900 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center text-white/80">
-                <span className="text-7xl block mb-4">✈️</span>
-                <p className="font-display text-xl font-semibold">Tantur Turizm</p>
-                <p className="text-sm text-white/60 mt-1">1999'dan beri hizmetinizde</p>
-              </div>
-            </div>
+            <img
+              src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&q=80"
+              alt="Ofisimiz"
+              className="rounded-2xl shadow-2xl"
+              loading="lazy"
+            />
             <div className="absolute -bottom-5 -right-5 bg-gold text-white p-5 rounded-xl shadow-xl hidden sm:block">
               <p className="font-display text-3xl font-bold">1999</p>
               <p className="text-sm opacity-90">Kuruluş Yılı</p>

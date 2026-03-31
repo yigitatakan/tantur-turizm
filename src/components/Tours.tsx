@@ -3,37 +3,33 @@ const tours = [
     name: 'Balkan Turu',
     duration: '7 Gece / 8 Gün',
     price: '€599',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
     cities: 'Belgrad → Saraybosna → Dubrovnik → Ohrid',
     tag: 'En Popüler',
-    gradient: 'from-emerald-800 to-teal-600',
-    emoji: '🏔️',
   },
   {
     name: 'İtalya Turu',
     duration: '6 Gece / 7 Gün',
     price: '€899',
+    image: 'https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=600&q=80',
     cities: 'Roma → Floransa → Venedik → Milano',
     tag: null,
-    gradient: 'from-rose-800 to-red-600',
-    emoji: '🏛️',
   },
   {
     name: 'Dubai & Abu Dhabi',
     duration: '4 Gece / 5 Gün',
     price: '€749',
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80',
     cities: 'Dubai → Abu Dhabi → Çöl Safari',
     tag: 'Yeni',
-    gradient: 'from-amber-700 to-yellow-500',
-    emoji: '🏙️',
   },
   {
     name: 'Kapadokya Hafta Sonu',
     duration: '2 Gece / 3 Gün',
     price: '€299',
+    image: 'https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=600&q=80',
     cities: 'Göreme → Ürgüp → Avanos → Derinkuyu',
     tag: null,
-    gradient: 'from-orange-800 to-amber-600',
-    emoji: '🎈',
   },
 ]
 
@@ -48,8 +44,13 @@ export default function Tours() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {tours.map((t, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100">
-              <div className={`relative h-48 bg-gradient-to-br ${t.gradient} flex items-center justify-center`}>
-                <span className="text-6xl group-hover:scale-125 transition-transform duration-500">{t.emoji}</span>
+              <div className="relative h-48 overflow-hidden bg-slate-200">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                />
                 {t.tag && <span className="absolute top-3 right-3 bg-gold text-white text-xs font-bold px-3 py-1 rounded-full">{t.tag}</span>}
               </div>
               <div className="p-5">
