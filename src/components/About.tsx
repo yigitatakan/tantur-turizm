@@ -5,7 +5,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&q=80"
+              src="https://images.unsplash.com/photo-1596627288847-5bbcc2c7d51b?w=800&q=80"
               alt="Ofisimiz"
               className="rounded-2xl shadow-2xl"
               loading="lazy"
