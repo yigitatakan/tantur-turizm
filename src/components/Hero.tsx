@@ -13,11 +13,13 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen">
       {/* BG */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-800 to-slate-900">
         <img
           src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1920&q=80"
           alt="İstanbul"
           className="w-full h-full object-cover"
+          loading="eager"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-900/90 via-brand-800/70 to-brand-900/50" />
       </div>
